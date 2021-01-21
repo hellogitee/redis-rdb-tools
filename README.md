@@ -178,6 +178,11 @@ If this behaviour is unwanted the `-x/--no-expire` option will ignore all key ex
 Otherwise you may want to set an expiry time in the future with `-a/--amend-expire` option which adds an integer number of seconds to the expiry time of each key which is already set to expire.
 This will not change keys that do not already have an expiry set.
 
+## 可以使用bin目录下的decode，对rdb分析后的csv进行key前缀的统计 ##
+./decode -filename=./memory.csv
+or 
+cat memory.csv | ./decode
+
 # Using the Parser ##
 
     from rdbtools import RdbParser, RdbCallback
